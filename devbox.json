@@ -56,6 +56,18 @@
         "echo Init Contract $L1X_BUILD_CFG_CONTRACT_NAME",
         "RUST_LOG=$RUST_LOG $L1X_BUILD_CFG_TOOLS_PATH/cli  --private-key $VALIDATOR_PRIVATE_KEY_DEV submit-txn --payload-file-path l1x-conf/scripts/010-02-uc-ft-init.json"
       ],
+      "15_acc1_balance": [
+        "echo Init Contract $L1X_BUILD_CFG_CONTRACT_NAME",
+        "RUST_LOG=$RUST_LOG $L1X_BUILD_CFG_TOOLS_PATH/cli  --private-key $VALIDATOR_PRIVATE_KEY_DEV submit-txn --payload-file-path ./l1x-conf/scripts/010-03-uc-acc1-balance.json"
+      ],
+      "16_acc2_balance": [
+        "echo Init Contract $L1X_BUILD_CFG_CONTRACT_NAME",
+        "RUST_LOG=$RUST_LOG $L1X_BUILD_CFG_TOOLS_PATH/cli  --private-key $VALIDATOR_PRIVATE_KEY_DEV submit-txn --payload-file-path ./l1x-conf/scripts/010-04-uc-acc2-balance.json"
+      ],
+      "17_mint": [
+        "echo Init Contract $L1X_BUILD_CFG_CONTRACT_NAME",
+        "RUST_LOG=$RUST_LOG $L1X_BUILD_CFG_TOOLS_PATH/cli  --private-key $VALIDATOR_PRIVATE_KEY_DEV submit-txn --payload-file-path ./l1x-conf/scripts/010-05-uc-mint-acc1-to-acc2.json"
+      ],
       "14_init_setup": [
         "echo Initializing Setup",
         "if [ ! -d $L1X_BUILD_CFG_ARTIFACTS_PATH ]; then mkdir $L1X_BUILD_CFG_ARTIFACTS_PATH; fi",
