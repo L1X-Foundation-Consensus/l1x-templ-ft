@@ -1,11 +1,9 @@
 {
-  "smart_contract_function_call": {
-    "contract_instance_address": {
-      "hex": "6ec4adc9a2459639b60787b744b9d46623d2ebd5"
-    },
-    "function": { "text": "ft_balance_of" },
-    "arguments": {
-      "text": "{ \"account_id\": \"c81ddb9dfbe6b345b0265ff2405dc6c9826cb72e\" }"
-    }
+  "contract_instance_address": {
+    "hex": "8ff6d4a75de524cb2fb9c5617514c8c7b017aca5"
+  },
+  "function": { "text": "ft_balance_of" },
+  "arguments": {
+    "text": "{ \"account_id\": \"c81ddb9dfbe6b345b0265ff2405dc6c9826cb72e\" }"
   }
 }

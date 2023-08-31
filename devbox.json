@@ -1,7 +1,7 @@
 {
   "packages": ["llvm_15@15.0.7", "cassandra_4@4.1.2", "yq@3.2.2"],
   "env": {
-    "L1X_CHAIN_TYPE": "local_devnet",
+    "L1X_CHAIN_TYPE": "beta_testnet",
     "CASSANDRA1_DATA": "./l1x-conf/cassandra1_data",
     "CASSANDRA2_DATA": "./l1x-conf/cassandra2_data",
     "CASSANDRA_HOST": "127.0.0.1",
@@ -103,7 +103,7 @@
         "JSON_RPC_PORT=$(l1x-conf/get_chain_config.sh --network $L1X_CHAIN_TYPE --conf-key rpc_port)",
         "JSON_RPC=http://$JSON_RPC_HOST:$JSON_RPC_PORT",
         "echo RPC endpoint: $JSON_RPC",
-        "RUST_LOG=$RUST_LOG $L1X_BUILD_CFG_TOOLS_PATH/cli  --endpoint $JSON_RPC --private-key $ACC_AVA submit-txn --payload-file-path ./l1x-conf/scripts/010-03-uc-check-ava-balance.json"
+        "RUST_LOG=$RUST_LOG $L1X_BUILD_CFG_TOOLS_PATH/cli  --endpoint $JSON_RPC --private-key $ACC_AVA read-only-func-call --payload-file-path ./l1x-conf/scripts/010-03-uc-check-ava-balance.json"
       ],
       "16_ft_token_balance_bobby": [
         "echo Init Contract $L1X_BUILD_CFG_CONTRACT_NAME",
@@ -112,24 +112,25 @@
         "JSON_RPC_PORT=$(l1x-conf/get_chain_config.sh --network $L1X_CHAIN_TYPE --conf-key rpc_port)",
         "JSON_RPC=http://$JSON_RPC_HOST:$JSON_RPC_PORT",
         "echo RPC endpoint: $JSON_RPC",
-        "RUST_LOG=$RUST_LOG $L1X_BUILD_CFG_TOOLS_PATH/cli  --endpoint $JSON_RPC --private-key $ACC_BOBBY submit-txn --payload-file-path ./l1x-conf/scripts/010-04-uc-check-bobby-balance.json"
+        "RUST_LOG=$RUST_LOG $L1X_BUILD_CFG_TOOLS_PATH/cli  --endpoint $JSON_RPC --private-key $ACC_BOBBY read-only-func-call --payload-file-path ./l1x-conf/scripts/010-04-uc-check-bobby-balance.json"
       ],
-      "17_mint": [
+      "17_ft_token_balance_emma": [
         "echo Init Contract $L1X_BUILD_CFG_CONTRACT_NAME",
-        "ACC_SUPER=$(l1x-conf/get_dev_address.sh --dev super --type priv)",
+        "ACC_EMMA=$(l1x-conf/get_dev_address.sh --dev emma --type priv)",
         "JSON_RPC_HOST=$(l1x-conf/get_chain_config.sh --network $L1X_CHAIN_TYPE --conf-key host_ip)",
         "JSON_RPC_PORT=$(l1x-conf/get_chain_config.sh --network $L1X_CHAIN_TYPE --conf-key rpc_port)",
         "JSON_RPC=http://$JSON_RPC_HOST:$JSON_RPC_PORT",
         "echo RPC endpoint: $JSON_RPC",
-        "RUST_LOG=$RUST_LOG $L1X_BUILD_CFG_TOOLS_PATH/cli  --endpoint $JSON_RPC --private-key $ACC_SUPER submit-txn --payload-file-path ./l1x-conf/scripts/010-05-uc-mint-acc1-to-acc2.json"
+        "RUST_LOG=$RUST_LOG $L1X_BUILD_CFG_TOOLS_PATH/cli  --endpoint $JSON_RPC --private-key $ACC_EMMA read-only-func-call --payload-file-path ./l1x-conf/scripts/010-05-uc-check-emma-balance.json"
       ],
-      "99_test": [
-        "echo Launching the Test",
-        "export TST_ACC_AVA=$(l1x-conf/get_dev_address.sh --dev ava --type pub )",
-        "echo ava :: $TST_ACC_AVA",
-        "TST_ACC_CHRIS=$(l1x-conf/get_dev_address.sh --dev chris --type pub) && echo chris :: $TST_ACC_CHRIS",
-        "TST_ACC_DAVY=$(l1x-conf/get_dev_address.sh --dev davy --type pub)",
-        "echo davy :: $TST_ACC_DAVY"
+      "17_mint_ava_to_emma": [
+        "echo Init Contract $L1X_BUILD_CFG_CONTRACT_NAME",
+        "ACC_AVA=$(l1x-conf/get_dev_address.sh --dev ava --type priv)",
+        "JSON_RPC_HOST=$(l1x-conf/get_chain_config.sh --network $L1X_CHAIN_TYPE --conf-key host_ip)",
+        "JSON_RPC_PORT=$(l1x-conf/get_chain_config.sh --network $L1X_CHAIN_TYPE --conf-key rpc_port)",
+        "JSON_RPC=http://$JSON_RPC_HOST:$JSON_RPC_PORT",
+        "echo RPC endpoint: $JSON_RPC",
+        "RUST_LOG=$RUST_LOG $L1X_BUILD_CFG_TOOLS_PATH/cli  --endpoint $JSON_RPC --private-key $ACC_AVA submit-txn --payload-file-path ./l1x-conf/scripts/010-20-uc-mint-ava-to-emma.json"
       ]
     }
   }

@@ -4,6 +4,6 @@
   },
   "function": { "text": "ft_balance_of" },
   "arguments": {
-    "text": "{ \"account_id\": \"dbc6fc9db8704f95dc4935d5cc43df28f34ea667\" }"
+    "text": "{ \"account_id\": \"8fa80726c4e5444181ecf4eff8105d24256659f7\" }"
   }
 }
