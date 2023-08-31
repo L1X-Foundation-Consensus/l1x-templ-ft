@@ -1,0 +1,10 @@
+networks:
+  beta_testnet:
+    chain_id: 4
+    host_ip: 52.62.71.83
+    rpc_port: 50051
+
+  local_devnet:
+    chain_id: 5
+    host_ip: 127.0.0.1
+    rpc_port: 50051

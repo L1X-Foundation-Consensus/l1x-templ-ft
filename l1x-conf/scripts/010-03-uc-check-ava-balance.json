@@ -5,7 +5,7 @@
     },
     "function": { "text": "ft_balance_of" },
     "arguments": {
-      "text": "{ \"account_id\": \"a11ce00000000000000000000000000000000000\" }"
+      "text": "{ \"account_id\": \"c81ddb9dfbe6b345b0265ff2405dc6c9826cb72e\" }"
     }
   }
 }
