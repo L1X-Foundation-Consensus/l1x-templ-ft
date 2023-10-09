@@ -1,6 +1,6 @@
 {
   "smart_contract_init": [
-    { "hex": "45ec5100d8199177d3b8634a61b231552d55d8d2" },
+    { "hex": "4649c987310662fd2ef93f2567bfb4bf0ed652fb" },
     {
       "text": "{\"metadata\":{\"name\":\"ShibaInu\",\"decimals\":18,\"symbol\":\"SHIB\"},\"account_ids\":[\"c81ddb9dfbe6b345b0265ff2405dc6c9826cb72e\",\"dbc6fc9db8704f95dc4935d5cc43df28f34ea667\",\"86c369442b86e48cfcf29df892a189d3e93a97f7\"],\"amounts\":[\"1000\",\"2000\",\"3000\"]}"
     }

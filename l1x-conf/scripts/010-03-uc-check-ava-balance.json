@@ -1,6 +1,6 @@
 {
   "contract_instance_address": {
-    "hex": "c21ab6058e399622caabd1fd5ba484bd5279c851"
+    "hex": "4bf30cd8d1d912efc851026aeaad287af54402c7"
   },
   "function": { "text": "ft_balance_of" },
   "arguments": {

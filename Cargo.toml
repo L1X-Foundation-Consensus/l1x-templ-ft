@@ -1,6 +1,6 @@
 [workspace]
 members = [
-	"l1x-contracts/l1x-ft",
+	"l1x-contracts/l1x_ft",
 ]
 
 [workspace.package]
